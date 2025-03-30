@@ -1,0 +1,10 @@
+input[type="text"], input[type="password"],input[type="email"],input[type="number"]{
+   border: 1px solid #141414;
+   width: 70%;
+   margin: auto;
+}
+
+input[type="submit"]{
+    width: 7rem;
+    margin: auto;
+}

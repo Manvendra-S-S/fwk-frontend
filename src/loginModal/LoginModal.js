@@ -75,7 +75,7 @@ const LoginModal = () => {
               LOGIN
             </button>
             <p className="mt-2 text-center">
-              New customer? <a href="#" data-bs-toggle="modal" data-bs-target="#SignUp">Register</a>
+              New customer? <a href="#" data-bs-toggle="modal" data-bs-target="#signUp">Register</a>
             </p>
           </div>
         </div>
