@@ -1,0 +1,41 @@
+.category-section {
+  padding: 50px 0;
+  background: white;
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  width: 250px; /* Adjust size as needed */
+  text-align: center;
+}
+
+.category-image {
+  width: 100%;
+  height: 250px; /* Maintain uniform height */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.category-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.category-products {
+  font-size: 16px;
+  color: gray;
+}

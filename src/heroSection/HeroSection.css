@@ -1,0 +1,46 @@
+.hero {
+    position: relative;
+    background: url("https://shopdumroo.com/cdn/shop/files/051A0881_2.jpg?v=1722603567") no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.2); /* Adds a subtle dark overlay */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero-text {
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .small-text {
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
+  
+  .title {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .btn-dark {
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
