@@ -3,16 +3,16 @@ import SignUp from "../signUp/SignUp";
 
 const LoginModal = () => {
   // State to store email and password
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
   // Function to handle login
   const handleLogin = async () => {
-    const loginData = { email, password };
+    const loginData = { username, password };
 
     try {
-      const response = await fetch("http://localhost:8080/api/auth/login", {
+      const response = await fetch("http://localhost:8081/user/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(loginData),
@@ -53,11 +53,11 @@ const LoginModal = () => {
           <div className="modal-body">
             <p>Please enter your e-mail and password:</p>
             <input
-              type="email"
+              type="username"
               className="form-control mb-2"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
             <input
               type="password"

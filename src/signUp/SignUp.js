@@ -1,6 +1,33 @@
+import axios from "axios";
 import "./Signup.css";
-
+import React, { useState} from "react";
 const SignUp = () => {
+
+  const [username , setUsername] = useState("");
+  const [ email, setEmail] = useState("");
+  const [password , setPassword] = useState("");
+  const [phonenumber , setPhonenumber] = useState("");
+  const submitDetails = async(e) => {
+    e.preventDefault();
+    const userData = {
+      username : username,
+      email : email,
+      password : password,
+      phonenumber : phonenumber,
+    };
+  
+    await axios
+        .post("http://localhost:8081/user/signUp",
+          userData
+        )
+        .then((response) => {
+    alert("User registered Successfully")
+  })
+    .catch((error) => {
+      alert(error.response.data)
+    });
+  };
+
     return (
       <div
         className="modal fade"
@@ -18,22 +45,32 @@ const SignUp = () => {
             <div className="modal-body">
               <form>
                 <div className="mb-3">
-                  <label htmlFor="inputEmail3" className="form-label">Username</label>
-                  <input type="text" className="form-control" id="inputEmail3" />
+                  <label htmlFor="username" className="form-label">Username</label>
+                  <input type="text" className="form-control" id="username" 
+                  onChange={(event) => setUsername(event.target.value)}
+                  />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="inputEmail3" className="form-label">Email</label>
-                  <input type="email" className="form-control" id="inputEmail3" />
+                  <input type="email" className="form-control" id="inputEmail3" 
+                  onChange={(event) => setEmail(event.target.value)}
+                  />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="inputPhone3" className="form-label">Phone Number</label>
-                  <input type="number" className="form-control" id="inputPhone3" />
+                  <input type="text" className="form-control" id="inputPhone3" 
+                  onChange={(event) => setPhonenumber(event.target.value)}
+                  />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="inputPassword3" className="form-label">Passwod</label>
-                  <input type="password" className="form-control" id="inputPassword3" />
+                  <input type="password" className="form-control" id="inputPassword3" 
+                  onChange={(event) => setPassword(event.target.value)}
+                  />
                 </div>
-                <button type="submit" className="btn btn-primary">Sign Up</button>
+                <button type="submit" className="btn btn-primary"
+                onClick={submitDetails}
+                >Sign Up</button>
               </form>
             </div>
           </div>
