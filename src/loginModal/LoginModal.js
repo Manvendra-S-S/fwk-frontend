@@ -52,20 +52,25 @@ const LoginModal = () => {
           </div>
           <div className="modal-body">
             <p>Please enter your e-mail and password:</p>
-            <input
-              type="username"
-              className="form-control mb-2"
-              placeholder="Username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-            <input
-              type="password"
-              className="form-control mb-2"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+            <div className="form-group">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            </div>
+            <br />
+            <div className="form-group">
+              <input
+                type="password"
+                className="form-control"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
             <a href="#" className="text-muted">Forgot your password?</a>
           </div>
           <div className="modal-footer">
@@ -80,7 +85,7 @@ const LoginModal = () => {
           </div>
         </div>
       </div>
-      <SignUp/>
+      <SignUp />
     </div>
   );
 };
